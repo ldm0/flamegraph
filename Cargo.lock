@@ -874,8 +874,7 @@ dependencies = [
 [[package]]
 name = "inferno"
 version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "692eda1cc790750b9f5a5e3921ef9c117fd5498b97cfacbc910693e5b29002dc"
+source = "git+https://github.com/ldm0/inferno?branch=ldm_xctrace_support#6cb0915d0baed68cbf7b36c0cd9558915c0d6230"
 dependencies = [
  "ahash",
  "crossbeam-channel",
