@@ -235,6 +235,8 @@ mod arch {
             .arg(r#"/trace-toc/*/data/table[@schema="time-profile"]"#)
             .output()
             .context("Run xctrace export failed.")?;
+        std::fs::remove_dir_all(&trace_file)
+            .with_context(|| anyhow!("Remove trace({}) failed.", trace_file.to_string_lossy()))?;
         if !output.status.success() {
             anyhow::bail!(format!(
                 "unable to run 'xctrace export': ({}) {}",
