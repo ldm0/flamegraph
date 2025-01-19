@@ -192,6 +192,8 @@ mod arch {
             .arg("record")
             .arg("--template")
             .arg("Time Profiler")
+            .arg("--target-stdout")
+            .arg("-")
             .arg("--output")
             .arg(&trace_file);
         match workload {
